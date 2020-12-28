@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/ltd-app/static/css/main.6b85c20a.chunk.css",
-    "main.js": "/ltd-app/static/js/main.4b126933.chunk.js",
-    "main.js.map": "/ltd-app/static/js/main.4b126933.chunk.js.map",
+    "main.js": "/ltd-app/static/js/main.86d384c1.chunk.js",
+    "main.js.map": "/ltd-app/static/js/main.86d384c1.chunk.js.map",
     "runtime-main.js": "/ltd-app/static/js/runtime-main.017b3a75.js",
     "runtime-main.js.map": "/ltd-app/static/js/runtime-main.017b3a75.js.map",
     "static/js/2.370c5fcb.chunk.js": "/ltd-app/static/js/2.370c5fcb.chunk.js",
@@ -20,6 +20,6 @@
     "static/js/runtime-main.017b3a75.js",
     "static/js/2.370c5fcb.chunk.js",
     "static/css/main.6b85c20a.chunk.css",
-    "static/js/main.4b126933.chunk.js"
+    "static/js/main.86d384c1.chunk.js"
   ]
 }
