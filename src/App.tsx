@@ -11,8 +11,8 @@ const App: React.FC = () => {
       <Header />
       <Container>
         <Switch>
-          <Route path='/' exact component={ProductsList} />
-          <Route path='/product/:productId' component={Product} />
+          <Route path='/ltd-app' exact component={ProductsList} />
+          <Route path='/ltd-app/product/:productId' component={Product} />
           <Route path='*' render={() => <div>404 NOT FOUND</div>} />
         </Switch>
       </Container>
