@@ -6,7 +6,7 @@ export default function Header() {
    return (
       <HeaderBlock>
          <HeaderContent>
-            <Link to='/'>
+            <Link to='/ltd-app'>
                <HeaderText>Каталог товаров</HeaderText>
             </Link>
          </HeaderContent>

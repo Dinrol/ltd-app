@@ -16,7 +16,7 @@ export const ProductCardList: React.FC<productType> = (props: productType) => {
          <div>
             <img src={props.image} alt="" />
          </div>
-         <Link to={`/product/${props.id}`}>
+         <Link to={`/ltd-app/product/${props.id}`}>
             <h3 onClick={setSelectProduct}>{props.title}</h3>
          </Link>
          <div className='category'>Категория - {props.category}</div>

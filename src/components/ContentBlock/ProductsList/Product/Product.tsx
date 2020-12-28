@@ -12,7 +12,7 @@ export const Product: React.FC = () => {
       <>
          {!isLoading
             ? <>
-               <Link to="/"><div className="back">Вернуться к выбору</div></Link>
+               <Link to="/ltd-app"><div className="back">Вернуться к выбору</div></Link>
                <StyledProduct>
                   <img src={product.image} alt="product" />
                   <div>
