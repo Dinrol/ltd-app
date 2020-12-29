@@ -10,7 +10,7 @@ import { ProductCardList } from './ProductCardList'
 export const WrapperProductCardList: React.FC = () => {
    const { products, isLoading, activeCategory, currentPage } = useSelector((state: RootState) => state.productsReducer)
    const dispatch = useDispatch()
-   const [currentPageLocal, setCurrentPageLocal] = useState(1)
+   const [currentPageLocal, setCurrentPageLocal] = useState(currentPage)
    const [productsPerPage] = useState(4)
 
    const indexOfLastProduct = currentPageLocal * productsPerPage
@@ -23,7 +23,7 @@ export const WrapperProductCardList: React.FC = () => {
    }
 
    useEffect(() => {
-      setCurrentPageLocal(1)
+      setCurrentPageLocal(currentPage)
    }, [activeCategory])
 
    useEffect(() => {
