@@ -29,7 +29,6 @@ export const WrapperProductCardList: React.FC = () => {
    useEffect(() => {
       dispatch({ type: START_LOADING })
       dispatch(setProductsByCategory(activeCategory))
-      setCurrentPageLocal(currentPage)
    }, [])
 
    return (
