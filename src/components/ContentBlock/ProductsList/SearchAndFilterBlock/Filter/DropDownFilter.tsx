@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { setCategoryProducts } from '../../../../../redux/actions/products'
+import { setProductsByCategory } from '../../../../../redux/actions/products'
 import { RootState } from '../../../../../redux/redusers'
 import StyledDropDownFilter from '../../../../../styled/BodyBlock/SearchAndFilterBlock/StyledDropDownFilter'
 
@@ -8,7 +8,7 @@ export const DropDownFilter: React.FC = () => {
    const dispatch = useDispatch()
    const setActiveCategory = (e: React.MouseEvent<HTMLSpanElement, MouseEvent>) => {
       let spanValue = e.currentTarget.innerHTML
-      dispatch(setCategoryProducts(spanValue))
+      dispatch(setProductsByCategory(spanValue))
    }
    const { activeCategory, categories } = useSelector((state: RootState) => state.productsReducer)
    return (

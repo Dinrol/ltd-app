@@ -6,6 +6,7 @@ import StyledProductCardList from '../../../../styled/BodyBlock/ProductCard/Styl
 
 export const ProductCardList: React.FC<productType> = (props: productType) => {
    const dispatch = useDispatch()
+
    const setSelectProduct = () => {
       dispatch(setProductsById(props.id))
       dispatch(selectProduct(props.id))
@@ -13,9 +14,11 @@ export const ProductCardList: React.FC<productType> = (props: productType) => {
 
    return (
       <StyledProductCardList>
-         <div>
-            <img src={props.image} alt="" />
-         </div>
+         <Link to={`/ltd-app/product/${props.id}`}>
+            <div className='imgBlock' onClick={setSelectProduct}>
+               <img src={props.image} alt="" />
+            </div>
+         </Link>
          <Link to={`/ltd-app/product/${props.id}`}>
             <h3 onClick={setSelectProduct}>{props.title}</h3>
          </Link>

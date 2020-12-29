@@ -4,7 +4,6 @@ import search from '../../../components/assets/search-solid.svg'
 const StyledSearch = styled.div`
    div{
       position:relative;
-      width:200px;
       :before{
          position: absolute;
          content:'';
@@ -18,9 +17,7 @@ const StyledSearch = styled.div`
       }
    }
    input{
-      position: relative;
-      width: 100%;
-      padding: 16px 0 16px 42px;
+      padding: 16px 16px 16px 42px;
       border: 1px solid  #3f51b5;
       border-radius: 4px;
       font-size:16px;  

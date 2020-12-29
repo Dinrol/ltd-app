@@ -6,6 +6,7 @@ const StyledDropDownFilter = styled.div`
    position: relative;
    display: inline-block;
    margin-right:10px;
+   margin-bottom:20px;
    .dropbtn {      
       background-color: inherit;
       color: black;

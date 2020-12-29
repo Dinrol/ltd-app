@@ -14,7 +14,9 @@ export const Product: React.FC = () => {
             ? <>
                <Link to="/ltd-app"><div className="back">Вернуться к выбору</div></Link>
                <StyledProduct>
-                  <img src={product.image} alt="product" />
+                  <div className='imgProduct'>
+                     <img src={product.image} alt="product" />
+                  </div>
                   <div>
                      <h1>
                         {product.title}

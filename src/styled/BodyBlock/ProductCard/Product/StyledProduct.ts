@@ -4,13 +4,18 @@ export const StyledProduct = styled.div`
    padding: 5px;
    margin:0 auto;
    display:flex;
-   img{
-      max-width:400px;
-      margin-right:20px;
+   justify-content:center;
+   flex-wrap:wrap;
+   .imgProduct{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      img{
+         max-width:80%;
+      }
    }
    div{
       max-width:700px;
-      margin:0 auto;
       p{
          color: #DC3E31;
          margin-bottom:40px;

@@ -1,9 +1,10 @@
 import styled from 'styled-components';
 
 const StyledWrapperProductCardList = styled.div`
-   padding: 0 15px; 
-   column-count:4;
-   column-gap: 2em; 
+   display:flex;
+   justify-content:space-between;
+   flex-wrap:wrap;
+   margin-bottom:15px;
 `;
 
 export default StyledWrapperProductCardList;

@@ -11,6 +11,7 @@ const Container = styled.div`
     color:black;
     .back{
     margin-bottom:30px;
+    margin-left:5px;
     border: 1px solid #3f51b5;
     border-radius:20px;
     padding:5px;
