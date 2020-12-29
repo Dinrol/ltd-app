@@ -1,4 +1,4 @@
-import { ProductsActionTypes, productType, SELECT_PRODUCT, SET_CATEGORY, SET_PRODUCTS, SET_PRODUCTS_BY_SEARCH, SET_PRODUCT_BY_ID, START_LOADING } from './../actions/products';
+import { ProductsActionTypes, productType, SELECT_PRODUCT, SET_CATEGORY, SET_CURRENT_PAGE, SET_PRODUCTS, SET_PRODUCTS_BY_SEARCH, SET_PRODUCT_BY_ID, START_LOADING } from './../actions/products';
 
 export interface ProductsState {
    products: productType[]
@@ -7,6 +7,7 @@ export interface ProductsState {
    activeCategory: string
    selectedProductId?: number
    searchValue: string
+   currentPage: number
 }
 
 const initialState: ProductsState = {
@@ -14,7 +15,8 @@ const initialState: ProductsState = {
    isLoading: true,
    categories: ['Показать все', 'men clothing', 'jewelery', 'electronics', 'women clothing'],
    activeCategory: 'Показать все',
-   searchValue: ''
+   searchValue: '',
+   currentPage: 1
 }
 
 export const productsReducer = (state = initialState, action: ProductsActionTypes): ProductsState => {
@@ -56,6 +58,12 @@ export const productsReducer = (state = initialState, action: ProductsActionType
          return {
             ...state,
             searchValue: action.payload as string
+         }
+      }
+      case SET_CURRENT_PAGE: {
+         return {
+            ...state,
+            currentPage: action.payload as number
          }
       }
       default:

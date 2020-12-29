@@ -7,6 +7,7 @@ export const START_LOADING: string = "START_LOADING"
 export const SET_CATEGORY: string = "SET_CATEGORY"
 export const SELECT_PRODUCT: string = "SELECT_PRODUCT"
 export const SET_PRODUCTS_BY_SEARCH: string = "SET_PRODUCTS_BY_SEARCH"
+export const SET_CURRENT_PAGE: string = "SET_CURRENT_PAGE"
 
 export type productType = {
    id: number
@@ -49,13 +50,19 @@ export interface productBySearch {
    payload: string
 }
 
+export interface setCurrenPageType {
+   type: typeof SET_CURRENT_PAGE,
+   payload: number
+}
+
 export type ProductsActionTypes =
    productsAllType
    | productByIdType
    | selectIdType
    | categoryType
    | selectProduct
-   | productBySearch;
+   | productBySearch
+   | setCurrenPageType;
 
 export const setProducts = () => async (dispatch: Dispatch<productsAllType>) => {
    let response = await productsAPI.getAllProducts()
@@ -86,4 +93,8 @@ export const setProductsByCategory = (category: string) => async (dispatch: Disp
 export const setProductsBySearch = (userList: productType[], searchValue: string) => (dispatch: Dispatch<productBySearch | productsAllType>) => {
    dispatch({ type: SET_PRODUCTS_BY_SEARCH, payload: searchValue })
    dispatch({ type: SET_PRODUCTS, payload: userList })
+}
+
+export const setCurrentPage = (page: number) => (dispatch: Dispatch<setCurrenPageType>) => {
+   dispatch({ type: SET_CURRENT_PAGE, payload: page })
 }
