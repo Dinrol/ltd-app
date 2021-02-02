@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import dropdawn from '../../../components/assets/dropDownArrow.svg'
+import dropdown from '../../../components/assets/dropDownArrow.svg'
 
 
 const StyledDropDownFilter = styled.div`
@@ -16,7 +16,7 @@ const StyledDropDownFilter = styled.div`
       cursor: pointer;
       border-radius:5px;
       i{
-         background-image:url(${dropdawn}); 
+         background-image:url(${dropdown}); 
          width:16px; 
          height:16px; 
          display:inline-block;
@@ -40,16 +40,13 @@ const StyledDropDownFilter = styled.div`
       cursor:pointer;
    }
 
-   .dropdown-content span:hover {background-color: #f1f1f1}
+   .dropdown-content span:hover {
+      background-color: #f1f1f1
+   }
 
    :hover .dropdown-content {
       display: block;
    }
-
-   :hover .dropbtn {
-      /* background-color: #3e8e41; */
-   }
-
 `;
 
 export default StyledDropDownFilter;

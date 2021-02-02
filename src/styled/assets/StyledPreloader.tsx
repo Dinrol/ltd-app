@@ -2,9 +2,8 @@ import styled from 'styled-components';
 
 const StyledPreloader = styled.div`
    display:flex;
-   img{
-      flex: auto;
-   }
-`;
+   justify-content:center;
+   align-items:center;
+   `;
 
 export default StyledPreloader;
